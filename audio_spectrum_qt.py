@@ -78,9 +78,7 @@ class AudioStream(object):
                 self.traces[name] = self.spectrum.plot(pen='m', width=3)
                 self.spectrum.setLogMode(x=True, y=True)
                 self.spectrum.setYRange(-4, 0, padding=0)
-                self.spectrum.setXRange(
-                    np.log10(20), np.log10(self.RATE / 2), padding=0.005)
-
+                self.spectrum.setXRange(np.log10(20), np.log10(self.RATE / 2), padding=0.005)
     def update(self):
         wf_data = self.stream.read(self.CHUNK)
         wf_data = struct.unpack(str(2 * self.CHUNK) + 'B', wf_data)
@@ -88,8 +86,7 @@ class AudioStream(object):
         self.set_plotdata(name='waveform', data_x=self.x, data_y=wf_data,)
 
         sp_data = fft(np.array(wf_data, dtype='int8') - 128)
-        sp_data = np.abs(sp_data[0:int(self.CHUNK / 2)]
-                         ) * 2 / (128 * self.CHUNK)
+        sp_data = np.abs(sp_data[0:int(self.CHUNK / 2)]) * 2 / (128 * self.CHUNK)
         self.set_plotdata(name='spectrum', data_x=self.f, data_y=sp_data)
 
     def animation(self):
