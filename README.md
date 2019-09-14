@@ -14,3 +14,7 @@ $ conda install -n audio-research pyaudio
 $ conda install -n audio-research numpy  
 $ conda install -n audio-research matplotlib  
 
+# File list
+## audio_record_test.ipynb
+The file show how to record data from microphone to output.wav  
+After testing, this code is working on Mac OS   
