@@ -5,5 +5,7 @@ You can use anaconda in different system
 conda env list     
 conda create -n audio-research    
 conda activiate audio-research  
+## install jupyter notebook
+conda install -n audio-research jupyter   
 ## install related package 
-conda install -n audio-research pyaudio  
+conda install -n audio-research pyaudio   
