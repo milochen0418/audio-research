@@ -3,7 +3,7 @@
 You can use anaconda in different system  
 ## Use conda to setup environment
 $ conda env list     
-$ conda env remove -n audio-research
+$ conda env remove -n audio-research  
 $ conda create -n audio-research python=3.6  
 $ conda activiate audio-research  
 ## install jupyter notebook
