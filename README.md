@@ -19,10 +19,16 @@ $ conda install -n audio-research scipy
 
 # File list  
 ## audio_record_and_play_test.ipynb  
-This is most simple example for you to record and play.  
-This code should be running well on your platform.  
-## audio_record_test.ipynb
-The file show how to record data from microphone to output.wav  
-After testing, this code is working on Mac OS     
+This is most simple example for you to record file and play file.  
+This code should be running well on your OS in jupyter notebook.  
+
+## audio_spectrum_analyzer.ipynb
+The first cell in this file is the implementation of Waveform Viewer.  
+The second cell in this file is the impelemntation of Audio Spectrum Analyzer.  
+I just justify the code in first cell to become the code in second cell.  
+That's my method to make a audio spectrum analyzer in jupyter notebook.    
+
 ## audio_spectrum_qt.py  
-Development qt app for audio_spectrum  
+It is  qt app for audio_spectrum.  
+But resize window will be dead because I don't write code to process the  
+conflict between UI and data processing.   
